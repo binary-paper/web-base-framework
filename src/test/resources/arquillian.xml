@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2016 <a href="mailto:willy.gadney@binarypaper.net">Willy Gadney</a>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian
+                                http://www.jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <!-- Uncomment to have test archives exported to the file system for inspection -->
+    <engine>
+        <property name="deploymentExportPath">target/</property>
+    </engine>
+    <!-- Force the use of the Servlet 3.0 protocol with all containers, as it
+    is the most mature -->
+    <defaultProtocol type="Servlet 3.0" />
+    <!-- Example configuration for Arquillian Container Chameleon -->
+    <container qualifier="wildfly-managed" default="true">
+        <configuration>
+            <property name="chameleonTarget">wildfly:10.1.0.Final:managed</property>
+            <property name="jbossHome">target/wildfly-10.1.0.Final</property>
+            <property name="serverConfig">standalone-full.xml</property>
+            <property name="javaVmArguments">-Djboss.socket.binding.port-offset=700</property>
+            <!--Default management port (9990) + port offset (700) = 10690-->
+            <property name="managementPort">10690</property>
+        </configuration>
+    </container>
+    <!--<container qualifier="wildfly-remote">
+        <configuration>
+            <property name="chameleonTarget">wildfly:10.0.0.Final:remote</property>
+            <property name="managementAddress">localhost</property>
+            <property name="managementPort">9990</property>
+            <property name="username">management_username</property>
+            <property name="password">management_password</property>
+        </configuration>
+    </container>-->
+</arquillian>

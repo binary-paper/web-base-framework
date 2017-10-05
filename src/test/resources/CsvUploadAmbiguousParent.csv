@@ -1,0 +1,6 @@
+LOOKUP_LIST_NAME,DISPLAY_VALUE,ACTIVE,EFFECTIVE_FROM,EFFECTIVE_TO,PARENT_LOOKUP_LIST_NAME,PARENT_DISPLAY_VALUE
+lookup_list_1a,Level 1 value,TRUE,,,,
+lookup_list_1b,Level 1 value,TRUE,,,,
+lookup_list_2,Level 2 value,TRUE,,,lookup_list_1a,Level 1 value
+lookup_list_2,Level 2 value,TRUE,,,lookup_list_1b,Level 1 value
+lookup_list_3,Level 3 value,TRUE,,,lookup_list_2,Level 2 value

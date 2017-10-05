@@ -1,0 +1,13 @@
+LOOKUP_LIST_NAME,DISPLAY_VALUE,ACTIVE,EFFECTIVE_FROM,EFFECTIVE_TO,PARENT_LOOKUP_LIST_NAME,PARENT_DISPLAY_VALUE
+cellphone_make,Samsung,TRUE,,,,
+cellphone_make,LG,TRUE,,,,
+cellphone_make,Sony,TRUE,,,,
+cellphone_model,Galaxy S3,FALSE,,,cellphone_make,Samsung
+cellphone_model,Galaxy S4,FALSE,,,cellphone_make,Samsung
+cellphone_model,Galaxy S5,FALSE,,,cellphone_make,Samsung
+cellphone_model,Galaxy S6,TRUE,2015-04-01,2017-03-31,cellphone_make,Samsung
+cellphone_model,Galaxy S7,TRUE,2016-04-01,2018-03-31,cellphone_make,Samsung
+cellphone_model,G3,TRUE,,,cellphone_make,LG
+cellphone_model,G4,TRUE,,,cellphone_make,LG
+cellphone_model,G5,TRUE,,,cellphone_make,LG
+cellphone_model,Xperia Z5,TRUE,,,cellphone_make,Sony
